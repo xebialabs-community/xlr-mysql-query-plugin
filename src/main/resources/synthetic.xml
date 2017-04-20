@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<synthetic xsi:schemaLocation="http://www.xebialabs.com/deployit/synthetic synthetic.xsd" xmlns="http://www.xebialabs.com/deployit/synthetic" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <!-- mysql custom configuration item -->
+    <type type="mysql.Server" extends="configuration.HttpConnection">
+        <property name="schema" default="" hidden="false" />
+         <property name="mysqlHome" label="MySQL Client Home" description="Path to MYSQL Client" default="/usr/local/mysql/bin/" hidden="false" />
+    </type>
+    <!-- mysql script execution -->
+    <type type="xlr.MysqlQueries" extends="xlrelease.PythonScript">
+        <property name="taskColor" hidden="true" default="#119fc6"/>
+        <property name="mysqlServer" category="input" label="DB" referenced-type="mysql.Server" kind="ci"/>
+        <property name="iconLocation" default="mysql/images/logo-mysql.png" hidden="true" />
+        <property name="mysqlQueries" label="mySQL Queries" default ="" required="true" hidden ="false" category="input" size="large" />
+        <property name="scriptLocation" default="mysql/run_queries.py" hidden="true" />
+    </type>
+</synthetic>
