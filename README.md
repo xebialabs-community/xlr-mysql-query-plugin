@@ -12,7 +12,6 @@ The xlr-mysql-query-plugin is an XL Release plugin that adds capability for runn
 	* **XL Release**: version 6.0+
 	* **MySQL Server Configuration Item**: The MySQL server connections must be stored as configuration items in XL Release including the local path to the msyql client.  (i.e. /usr/local/mysql/bin/)
 	* **MySQL Client**: MySQL Client must be installed on the XL Release server for remotely connecting to the database.
-	* **XL Release Template Variable ${getBuild}**: The build number pushed automatically from Jenkins. Some ACC queries require this so we made it required,  It can be empty if non of your queries require a build number.
 	
 ## Types ##
 
